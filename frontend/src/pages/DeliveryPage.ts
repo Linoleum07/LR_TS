@@ -1,13 +1,13 @@
 export const DeliveryPage = (): string => {
   return `
     <div class="card">
-      <h2>Delivery</h2>
+      <h2>Оформление доставки</h2>
 
       <form data-delivery class="form">
-        <input placeholder="Address" required />
-        <input placeholder="Phone" required />
+        <input placeholder="Адрес" required />
+        <input placeholder="Телефон" required />
         <input placeholder="Email" required />
-        <button type="submit">Order</button>
+        <button type="submit">Оформить заказ</button>
       </form>
     </div>
   `;

@@ -1,17 +1,15 @@
-import { CartItem } from '../components/CartItem';
-
-type CartItemType = {
-  productId: string;
-  quantity: number;
-};
-
-export const CartPage = (items: CartItemType[]): string => {
+export const CartPage = (items: any[]): string => {
   return `
     <div class="card">
-      <h2>Your Cart</h2>
-      <div class="cart-list">
-        ${items.length ? items.map(CartItem).join('') : '<p>Cart is empty</p>'}
-      </div>
+      <h2>Корзина</h2>
+      ${items.length ? items.map(item => `
+        <div class="cart-item">
+          <div>
+            <h3 data-title="basket">${item.productId}</h3>
+            <p data-price="basket">${item.quantity}</p>
+          </div>
+        </div>
+      `).join('') : '<p>Корзина пуста</p>'}
     </div>
   `;
 };
