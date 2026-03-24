@@ -1,21 +1,15 @@
-import { router } from './router/router';
-import { AuthPage } from './pages/AuthPage';
-import { CartPage } from './pages/CartPage';
-import { DeliveryPage } from './pages/DeliveryPage';
+import { fetchProducts } from './services/api';
 
-export const renderApp = () => {
+export const renderApp = async () => {
   const app = document.getElementById('app');
   if (!app) return;
 
-  const view = router();
+  try {
+    const products = await fetchProducts();
+    console.log("Products:", products);
 
-  if (view === 'auth') {
-    app.innerHTML = AuthPage();
-  } else if (view === 'cart') {
-    app.innerHTML = CartPage([]);
-  } else if (view === 'delivery') {
-    app.innerHTML = DeliveryPage();
-  } else {
-    app.innerHTML = `<h1>Home (пока пусто)</h1>`;
+    app.innerHTML = `<h1>Check console</h1>`;
+  } catch (error) {
+    console.error("API error:", error);
   }
 };
