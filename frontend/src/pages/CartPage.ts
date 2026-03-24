@@ -1,3 +1,5 @@
+import { CartItem } from '../components/CartItem';
+
 type CartItemType = {
   productId: string;
   quantity: number;
@@ -5,9 +7,9 @@ type CartItemType = {
 
 export const CartPage = (items: CartItemType[]): string => {
   return `
-    <div>
+    <div class="cart-container">
       <h2>Cart</h2>
-      ${items.map(item => `<p>${item.productId}</p>`).join('')}
+      ${items.map(CartItem).join('')}
     </div>
   `;
 };
