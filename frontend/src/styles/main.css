@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  padding: 15px 30px;
+  background: #1f2937;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form button {
+  width: 100%;
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #1e40af;
+}
+
+.cart-item {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.cart-actions {
+  margin-top: 5px;
+}
+
+.cart-actions button {
+  margin-right: 5px;
+  padding: 5px 10px;
+}
+
+.home-title {
+  text-align: center;
+}

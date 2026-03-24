@@ -9,9 +9,11 @@ export const CartItem = (item: CartItemType): string => {
       <h3 data-title="basket">${item.productId}</h3>
       <p data-price="basket">${item.quantity}</p>
 
-      <button data-plus="${item.productId}">+</button>
-      <button data-minus="${item.productId}">-</button>
-      <button data-remove="${item.productId}">Remove</button>
+      <div class="cart-actions">
+        <button data-plus="${item.productId}">+</button>
+        <button data-minus="${item.productId}">-</button>
+        <button data-remove="${item.productId}">Remove</button>
+      </div>
     </div>
   `;
 };

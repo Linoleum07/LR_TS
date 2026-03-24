@@ -7,9 +7,11 @@ type CartItemType = {
 
 export const CartPage = (items: CartItemType[]): string => {
   return `
-    <div class="cart-container">
-      <h2>Cart</h2>
-      ${items.map(CartItem).join('')}
+    <div class="card">
+      <h2>Your Cart</h2>
+      <div class="cart-list">
+        ${items.length ? items.map(CartItem).join('') : '<p>Cart is empty</p>'}
+      </div>
     </div>
   `;
 };
