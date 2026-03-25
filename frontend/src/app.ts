@@ -67,7 +67,7 @@ const getMockProducts = () => {
     {
       id: 3,
       name: "Электрогитара",
-      price: 25000,
+      price: 35000,
       image: "https://images.unsplash.com/photo-1588449668365-d15e397f6787"
     },
     {
